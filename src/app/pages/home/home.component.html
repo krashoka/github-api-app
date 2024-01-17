@@ -1,0 +1,16 @@
+<app-header></app-header>
+<h3 style="text-align: center">
+  Double Click "Find User" Button only for the first time after entering value
+</h3>
+<div class="home-container">
+  <label>User Name</label>
+  <input type="text" [(ngModel)]="inputValue" />
+  <button class="findBtn" (click)="getUserName()">Find User</button>
+</div>
+
+<div *ngIf="userValue" class="userData">
+  <app-user-card [username]="inputValue" class="repo"></app-user-card>
+  <app-repos [username]="inputValue" class="repo"></app-repos>
+</div>
+
+<app-footer></app-footer>

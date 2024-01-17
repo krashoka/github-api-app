@@ -1,0 +1,13 @@
+.userDetails {
+  padding: 20px;
+}
+
+.url {
+  word-wrap: break-word;
+}
+
+img {
+  margin: auto;
+  width: 100%;
+  height: 350px;
+}

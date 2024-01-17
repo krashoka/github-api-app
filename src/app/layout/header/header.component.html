@@ -1,0 +1,9 @@
+<div class="header">
+  <h2>Github Interactive API</h2>
+  <div class="menu">
+    <p *ngIf="isSignedIn">{{ userName }}</p>
+    <p *ngIf="!isSignedIn" (click)="goToSignIn()" class="menu-hover">Signin</p>
+    <p *ngIf="!isSignedIn" (click)="goToSignUp()" class="menu-hover">Signup</p>
+    <p (click)="handleLogout()" *ngIf="isSignedIn" class="menu-hover">logout</p>
+  </div>
+</div>

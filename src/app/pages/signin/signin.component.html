@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container">
+  <div class="container-header">
+    <label>SIGN IN PLEASE</label>
+  </div>
+  <div class="email-password">
+    <label>Email</label>
+    <input type="email" #email />
+  </div>
+  <div class="email-password">
+    <label>Password</label>
+    <!-- <div> -->
+    <input type="password" #password />
+    <!-- <label>Password must be 8 char long</label> -->
+    <!-- </div> -->
+  </div>
+  <div class="btn-container">
+    <button class="btn" (click)="onSignin(email.value, password.value)">
+      Sign in
+    </button>
+  </div>
+</div>
+<app-footer></app-footer>

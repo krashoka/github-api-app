@@ -6,22 +6,39 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Folder Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. AuthGaurd : This component contains authentication guard for restricting user to visit homepage without signing in.
 
-## Build
+2. components : This folder contains two components
+    - 1. repo : This component holds the repository of user 
+    - 2. user-card: This component holds the user details
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. layout : This folder contains two components 
+    - 1. header : This component contains header which is used in homepage, signin and signup page 
+    - 2. footer : This component contains footer for all pages.
 
-## Running unit tests
+4. pages : This folder contains four components
+    - 1. home : This is the home page component 
+    - 2. signin : This is the signin page component 
+    - 3. signup : This is the signup page component
+    - 4. pagenotfound : This is page not found component
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. services : This folder contains three services 
+    - 1. firebase service : This service used to authenticate user with firebase signin or signup authentication 
+    - 2. github service : This service provides the APIs for user details and repositories. 
+    - 3. shared service : This service used to reload the child components on button click
 
-## Running end-to-end tests
+## Steps to run application
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Step 1. You need to create an account using an email and password in signup page.
+  or
+  If you have already created an account then signin with email and password. For testing, I have created an account which is saved in firebase database
 
-## Further help
+  Credentials- (email: test@test.com, password: 12345678)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Step 2. After signin or signup you will be redirected to home page where a search bar is given. You need to provide a github username of a person then double click on "Find User" button then data will be displayed in form of user details and user repository. You can search for other users as well
+
+- Step 3. To logout, you need to click on the logout button in the header.
+
+## Thank you
